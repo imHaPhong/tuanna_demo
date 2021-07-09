@@ -1,0 +1,142 @@
+.cart-container {
+  .btn-container {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    align-self: flex-start;
+    width: 20%;
+    margin: 2rem 0;
+    svg {
+      margin-right: 2rem;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    height: 60px;
+    background-color: #f4f5f7;
+  }
+  tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      text-align: center;
+      padding: 2rem 0;
+      span {
+        cursor: pointer;
+        display: inline-block;
+        user-select: none;
+        margin: 0.5rem 1.5rem;
+        &:not(:nth-child(2)) {
+          margin: 0.5rem 1rem;
+        }
+      }
+      img {
+        width: 76px;
+      }
+    }
+    td {
+      &:nth-child(1) {
+        width: 10%;
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        column-span: 2;
+      }
+    }
+  }
+}
+
+.cart-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .discount-code {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin: 2rem 0;
+    }
+
+    .btn-container {
+      transition: all 0.5s ease-out;
+      width: 50%;
+      border: 1px solid #ddd;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+    h6 {
+      font-size: 1.8rem;
+    }
+    input {
+      padding: 1.8rem 1rem;
+      border: none;
+      border: 1px solid #ddd;
+      outline: none;
+      transition: all 0.5s;
+
+      &:focus {
+        border: 1px solid #ffc107;
+      }
+    }
+  }
+
+  .cart-total {
+    flex: 0 0 35%;
+  }
+  .cart-grand-content {
+    padding: 1.5rem 2rem 0rem 2rem;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    .label {
+      font-weight: 600;
+    }
+    ul {
+      list-style: none;
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        &:first-child {
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .cart-bottom {
+    .discount-code {
+      flex-basis: 375px;
+    }
+    .cart-total {
+      flex: 1;
+    }
+  }
+  .cart-container .btn-container {
+    width: 100%;
+  }
+}

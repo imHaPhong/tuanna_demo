@@ -1,0 +1,48 @@
+.wishlist-container {
+  width: 100%;
+  padding-bottom: 10rem;
+  border-bottom: 1px solid #ddd;
+  table {
+    width: 100%;
+  }
+  tbody,
+  thead {
+    font-weight: 600;
+  }
+  td {
+    text-align: center;
+    &:last-child {
+      display: flex;
+      padding: 5rem 0;
+      justify-content: flex-end;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+  tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid black;
+    }
+
+    .btn-container {
+      display: inline-block;
+      padding: 1.5rem 3rem;
+      cursor: pointer;
+    }
+
+    img {
+      width: 7.6rem;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .wishlist-container tr .btn-container {
+    padding: 1rem 2rem;
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}

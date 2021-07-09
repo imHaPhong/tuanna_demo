@@ -1,0 +1,40 @@
+.slick-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  max-width: 1140px;
+  margin: 0 auto;
+  background: white;
+  z-index: 100;
+  transition: all 1s;
+  animation: showNavbar 1s;
+  // opacity: 0;
+}
+
+@keyframes showNavbar {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .c-header {
+    .header-nav__left-side {
+      display: none;
+    }
+    .header-nav__menu {
+      display: block;
+      min-width: auto;
+    }
+    .header-nav {
+      padding: 3rem 1rem;
+      justify-content: space-between;
+    }
+  }
+}
